@@ -18,8 +18,8 @@ def train():
 
     # split into training and validation
     training_set, validation_set = split_dataset(data, 0.25, 1)
-    print 'training set has %s rows' % len(training_set)
-    print 'validation set has %s rows' % len(validation_set)
+    print ('training set has %s rows' % len(training_set))
+    print ('validation set has %s rows' % len(validation_set))
 
     # train model
     training_set["score_3"] = training_set["score_3"].fillna(425)
@@ -31,7 +31,7 @@ def train():
     validation_set["score_3"] = validation_set["score_3"].fillna(455)
     validation_set["default"] = validation_set["default"].fillna(False)
     validation_predictions = clf.predict_proba(validation_set[["score_3", "score_4", "score_5", "score_6"]])[:, 1]
-    print roc_auc_score(validation_set[["default"]], validation_predictions)
+    print (roc_auc_score(validation_set[["default"]], validation_predictions))
 
 
 if __name__ == '__main__':
