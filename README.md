@@ -2,7 +2,7 @@
 
 Practical case to simulate a production environment for serving machine learning models.
 
-**My own implementation of Nubank's case found on github for Machine Learning opening for learning purposes.**
+**My own implementation of Nubank's case found on github for Machine Learning Engineer learning purposes.**
 
 ## Case Description
 
